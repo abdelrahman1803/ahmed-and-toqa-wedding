@@ -9,7 +9,7 @@ body {
 }
 
 .basmala-image {
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   height: auto;
   margin: 0 auto;
@@ -34,6 +34,39 @@ body {
   line-height: 1.7;
   color: #333;
 }
+
+audio {
+  width: 100%; /* علشان المشغل يأخذ عرض الحاوية بالكامل */
+  max-width: 500px; /* تحديد الحد الأقصى للعرض (للتأكد من تناسق الشكل مع الشاشات الكبيرة) */
+  background-color: #e3f9f3; /* لون خلفية يناسب الثيم */
+  border: 2px solid #bff0e3; /* حواف بلون يتناسب مع الألوان */
+  border-radius: 12px; /* زوايا دائرية */
+  padding: 10px; /* البادنج حول المشغل */
+  margin-top: 20px; /* مسافة من أعلى */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف لتفصيل المشغل */
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #e3f9f3; /* خلفية التحكم */
+  border-radius: 12px; /* زوايا دائرية */
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #bff0e3; /* خلفية زر التشغيل */
+  border-radius: 50%; /* جعله دائري */
+  color: #333; /* لون الأيقونة */
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #bff0e3; /* لون المنزلق */
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: #bff0e3; /* لون شريط التقدم */
+  border-radius: 5px;
+}
+
 
 .hero {
   padding: 30px 20px;
@@ -71,7 +104,7 @@ body {
 }
 
 .image-container img {
-  width: 100%;
+  width: 80%;
   max-width: 400px;
   height: auto;
   margin: 0 auto;

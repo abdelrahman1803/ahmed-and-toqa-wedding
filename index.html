@@ -12,36 +12,40 @@
 </head>
 
 <body>
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <div class="basmala-container">
-    <img src="basmala.png" alt="بسم الله الرحمن الرحيم" class="basmala-image" />
-  </div>
 
   <div class="quran-verse animate">
-    <p class="verse">{وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ}</p>
+    <img src="basmala.png" alt="بسم الله الرحمن الرحيم" class="basmala-image" />
+    <p class="verse">
+      ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+      لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ
+      إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ ﴾ [الروم: ٢١]
+    </p>
   </div>
+
+  <audio autoplay loop>
+    <source src="vidrado_em_voce.mp3" type="audio/mpeg">
+    المتصفح لا يدعم تشغيل الصوت.
+  </audio>
+
+  <div class="dancing-gif-strip"></div>
 
   <div class="image-container image-large animate">
     <img src="Ahmed&Toqa.png" alt="Ahmed & Toqa" />
   </div>
-  
+
   <div class="hero animate">
     <p>ندعوكم لمشاركتنا أجمل لحظات عمرنا ✨</p>
     <div class="countdown" id="countdown"></div>
   </div>
 
   <div class="image-container animate">
-    <img src="bride.png" alt="Image Bride" style="width: 100%; border-radius: 20px;" />
+    <img src="bride.png" alt="Image Bride" />
   </div>
 
   <div class="details animate">
     <h2>تفاصيل الفرح 🎉</h2>
     <p>📍 القاعة: فيلا الماسة</p>
-    <p>🗓️ التاريخ: 1 مايو 2025 - الساعة 9 مساءً</p>
+    <p>🗓️ التاريخ: 1 مايو 2025 - الساعة 7 مساءً</p>
     <a class="map-link" href="https://maps.app.goo.gl/oDbvLqLJ7N7ceaLV8" target="_blank">🗺️ افتح الخريطة</a>
     <a class="calendar-link" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ahmed%20%26%20Tokka%20Wedding&dates=20250501T210000Z/20250501T230000Z&details=Wedding%20at%20C'est%20la%20vie&location=https://maps.app.goo.gl/nJETz9eTMVVDqMLH7" target="_blank">📅 أضف إلى التقويم</a>
   </div>
@@ -52,7 +56,7 @@
 
   <script>
     const countdown = document.getElementById("countdown");
-    const weddingDate = new Date("May 1, 2025 20:00:00").getTime();
+    const weddingDate = new Date("May 1, 2025 21:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -75,7 +79,6 @@
         const boxTop = el.getBoundingClientRect().top;
         if (boxTop < triggerBottom) {
           el.classList.add("show");
-          // Confetti on reveal
           confetti({
             particleCount: 5,
             spread: 40,

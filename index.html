@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forever Ahmed & Toqa</title>
+  <link rel="shortcut icon" href="A&T icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="basmala-container">
+    <img src="basmala.png" alt="بسم الله الرحمن الرحيم" class="basmala-image" />
+  </div>
+
+  <div class="quran-verse animate">
+    <p class="verse">{وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ}</p>
+  </div>
+
+  <div class="image-container image-large animate">
+    <img src="Ahmed&Toqa.png" alt="Ahmed & Toqa" />
+  </div>
+  
+  <div class="hero animate">
+    <p>ندعوكم لمشاركتنا أجمل لحظات عمرنا ✨</p>
+    <div class="countdown" id="countdown"></div>
+  </div>
+
+  <div class="image-container animate">
+    <img src="bride.png" alt="كرتون عروسين" style="width: 100%; border-radius: 20px;" />
+  </div>
+
+  <div class="details animate">
+    <h2>تفاصيل الفرح 🎉</h2>
+    <p>📍 القاعة: فيلا الماسة</p>
+    <p>🗓️ التاريخ: 1 مايو 2025 - الساعة 9 مساءً</p>
+    <a class="map-link" href="https://maps.app.goo.gl/oDbvLqLJ7N7ceaLV8" target="_blank">🗺️ افتح الخريطة</a>
+    <a class="calendar-link" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ahmed%20%26%20Tokka%20Wedding&dates=20250501T210000Z/20250501T230000Z&details=Wedding%20at%20C'est%20la%20vie&location=https://maps.app.goo.gl/nJETz9eTMVVDqMLH7" target="_blank">📅 أضف إلى التقويم</a>
+  </div>
+
+  <div class="footer">
+    <p>مع خالص حبنا 💕 – أحمد و تقى</p>
+  </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("May 1, 2025 20:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days} يوم ${hours} ساعة ${minutes} دقيقة ${seconds} ثانية`;
+    };
+
+    setInterval(updateCountdown, 1000);
+
+    const animatedElements = document.querySelectorAll(".animate");
+    const showOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      animatedElements.forEach((el) => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          el.classList.add("show");
+          // Confetti on reveal
+          confetti({
+            particleCount: 5,
+            spread: 40,
+            origin: { x: Math.random(), y: 0.3 }
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", showOnScroll);
+    window.addEventListener("load", () => {
+      showOnScroll();
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
+</body>
+</html>

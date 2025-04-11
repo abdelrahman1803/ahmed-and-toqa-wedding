@@ -4,6 +4,7 @@ body {
   background: linear-gradient(to bottom, #e9f7f2, #ffffff);
   color: #000;
   text-align: center;
+  overflow-x: hidden; /* لمنع الـ Horizontal Scroll */
 }
 
 #confetti {
@@ -16,19 +17,19 @@ body {
   z-index: 9999;
 }
 
-.quran-verse {
-  background-color: transparent;
-  padding: 30px 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .basmala-image {
   padding-top: 2%;
   max-width: 20%;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.quran-verse {
+  background-color: transparent;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .verse {
@@ -74,8 +75,11 @@ body {
   max-width: 30%;
 }
 
+.image-container img,
 .image-large img {
   width: 100%;
+  max-width: 100%; /* تأكد من أن الصور لا تكون أكبر من الشاشة */
+  height: auto;
   border-radius: 20px;
 }
 

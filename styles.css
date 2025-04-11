@@ -4,7 +4,7 @@ body {
   background: linear-gradient(to bottom, #e9f7f2, #ffffff);
   color: #000;
   text-align: center;
-  overflow-x: hidden; /* لمنع الـ Horizontal Scroll */
+  overflow-x: hidden;
 }
 
 #confetti {
@@ -27,21 +27,20 @@ body {
 
 .quran-verse {
   background-color: transparent;
-  padding: 30px 20px;
-  margin-bottom: 20px;
+  padding: 15px 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .verse {
   font-family: 'Lateef', serif;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  color: #333;
-  line-height: 1.6;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.4;
 }
 
 .hero {
   background-color: transparent;
-  padding: 50px 20px;
+  padding: 30px 20px;
 }
 
 .hero p {
@@ -50,24 +49,24 @@ body {
 }
 
 .countdown {
-  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   font-weight: bold;
   color: #333;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   direction: rtl;
 }
 
 .countdown span {
-  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   color: #d0f3ef;
 }
 
 .image-container {
-  margin: 30px auto;
+  margin: 20px auto;
   max-width: 300px;
 }
 
@@ -78,29 +77,29 @@ body {
 .image-container img,
 .image-large img {
   width: 100%;
-  max-width: 100%; /* تأكد من أن الصور لا تكون أكبر من الشاشة */
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
 }
 
 .details {
-  padding: 30px;
+  padding: 20px;
   font-size: clamp(1rem, 3.5vw, 1.2rem);
 }
 
 .map-link, .calendar-link {
   background-color: #d0f3ef;
   color: #000;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 10px;
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
   font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
 .footer {
-  padding: 20px;
+  padding: 15px;
   font-size: clamp(0.8rem, 2.5vw, 1rem);
   color: #555;
   position: relative;
@@ -109,7 +108,7 @@ body {
   background-color: #e9f7f2;
   text-align: center;
   z-index: 1;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .animate {

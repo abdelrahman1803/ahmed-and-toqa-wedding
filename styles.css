@@ -10,11 +10,15 @@ body {
 
 .basmala-image {
   max-width: 400px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
   padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
 
 .quran-verse {
   background-color: rgba(255, 255, 255, 0.7);
@@ -68,7 +72,12 @@ body {
 
 .image-container img {
   width: 100%;
-  border-radius: 20px;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .details {

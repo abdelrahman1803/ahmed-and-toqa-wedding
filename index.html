@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
 
   <div class="quran-verse animate">
     <img src="basmala.png" alt="بسم الله الرحمن الرحيم" class="basmala-image" />
@@ -22,12 +25,12 @@
     </p>
   </div>
 
-  <audio controls class="audio animate">
+  <!-- <audio controls class="audio animate">
     <source src="vidrado_em_voce.mp3" type="audio/mpeg">
     your browser does not support the audio element.
-  </audio>
+  </audio> -->
 
-  <div class="dancing-gif-strip animate"></div>
+  <!-- <div class="dancing-gif-strip animate"></div> -->
 
   <div class="image-container image-large animate">
     <img src="Ahmed&Toqa.png" alt="Ahmed & Toqa" />
@@ -38,23 +41,31 @@
     <div class="countdown" id="countdown"></div>
   </div>
 
-  <div class="image-container animate">
-    <img src="bride.png" alt="Image Bride" />
-  </div>
+  <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+<a href="https://logwork.com/countdown-6fxc" class="countdown-timer" data-timezone="Africa/Cairo" data-date="2025-05-01 18:00" data-background="#79daf2" data-digitscolor="#ffffff" data-unitscolor="#333333">­</a>
 
-  <div class="details animate">
-    <h2>كل التفاصيل هنا 🥳</h2>
-    <p>📍 القاعة: فيلا الماسة</p>
-    <p>🗓️ التاريخ: 1 مايو 2025 - الساعة 7 مساءً</p>
-    <a class="map-link" href="https://maps.app.goo.gl/oDbvLqLJ7N7ceaLV8" target="_blank">🗺️ تعالى شوفنا فين!</a>
+  <!-- Adding the details section -->
+  <section class="details-section">
+    <h2> تفاصيل الدعوة 🥳</h2>
+    <p>
+      <strong>📍 القاعة: </strong> فيلا الماسة
+    </p>
+    <p>
+      <strong>🗓️ التاريخ: </strong> 1 مايو 2025
+    </p>
+    <p>
+      <strong>⌚ الساعة: </strong> 7 مساءً
+    </p>
+
+    <a class="map-link" href="https://maps.app.goo.gl/oDbvLqLJ7N7ceaLV8" target="_blank">🗺️ افتح الموقع على الخريطة</a>
     <a class="calendar-link" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ahmed%20%26%20Toqa%20Wedding&dates=20250501T210000Z/20250501T230000Z&details=Ahmed%20%26%20Toqa%20Wedding%20Celebration&location=فيلا%20الماسة" target="_blank">📅 سجل الميعاد!</a>
-  </div>
+  </section>
 
   <div class="footer">
     <p>مع كل حبنا 💕 – أحمد و تقى</p>
   </div>
 
-  <script>
+  <!-- <script>
     const countdown = document.getElementById("countdown");
     const weddingDate = new Date("May 1, 2025 21:00:00").getTime();
 
@@ -97,6 +108,6 @@
         origin: { y: 0.6 }
       });
     });
-  </script>
+  </script> -->
 </body>
 </html>

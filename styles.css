@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #d2f4eb, #ffffff);
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #b8e9f4 0%, #fefefe 100%);
   color: #000;
   text-align: center;
   overflow-x: hidden;
@@ -19,7 +19,6 @@ body {
   padding-right: 20px;
 }
 
-
 .quran-verse {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 20px;
@@ -35,7 +34,56 @@ body {
   color: #333;
 }
 
-audio {
+.blob {
+  position: absolute;
+  background: #c0e8ff;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(30px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.blob1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 10%;
+  border-radius: 50% 40% 30% 50% / 50% 30% 40% 50%;
+  background: #a0d8ff;
+}
+
+.blob2 {
+  width: 350px;
+  height: 350px;
+  bottom: 10%;
+  right: 15%;
+  border-radius: 40% 60% 50% 40% / 50% 30% 60% 40%;
+  background: #b8e9f4;
+}
+
+.blob3 {
+  width: 250px;
+  height: 250px;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 60% 40% 30% 60% / 50% 60% 40% 50%;
+  background: #d0f0ff;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.audio {
   width: 80%;
   max-width: 500px;
   background-color: #e3f9f3;
@@ -46,27 +94,10 @@ audio {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-audio::-webkit-media-controls-panel {
+.audio::-webkit-media-controls-panel {
   background-color: #e3f9f3;
   border-radius: 12px;
 }
-
-audio::-webkit-media-controls-play-button {
-  background-color: #bff0e3;
-  border-radius: 50%;
-  color: #333;
-}
-
-audio::-webkit-media-controls-volume-slider {
-  background-color: #bff0e3;
-  border-radius: 5px;
-}
-
-audio::-webkit-media-controls-timeline {
-  background-color: #bff0e3;
-  border-radius: 5px;
-}
-
 
 .hero {
   padding: 30px 20px;
@@ -113,13 +144,32 @@ audio::-webkit-media-controls-timeline {
   padding-right: 20px;
 }
 
-.details {
-  padding: 20px;
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
+.details-section {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  border-radius: 20px;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.details-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.details-section p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
 }
 
 .map-link, .calendar-link {
-  background-color: #bff0e3;
+  background-color: #b8e9f4;
   color: #000;
   padding: 10px 20px;
   text-decoration: none;
@@ -129,22 +179,60 @@ audio::-webkit-media-controls-timeline {
   font-size: clamp(0.9rem, 3vw, 1rem);
 }
 
+.map-link:hover, .calendar-link:hover {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .details-section {
+    padding: 1.5rem;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .details-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .details-section p {
+    font-size: 1rem;
+  }
+
+  .map-link, .calendar-link {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-section {
+    padding: 1rem;
+    max-width: 90%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .details-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .details-section p {
+    font-size: 0.9rem;
+  }
+
+  .map-link, .calendar-link {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
 .footer {
-  background-color: #e3f9f3;
+  background-color: #b8e9f4;
   padding: 15px;
   font-size: clamp(0.8rem, 2.5vw, 1rem);
   font-weight: 500;
-  color: #555;
-  margin-top: 20px;
-}
-
-.animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
+  color: #333;
 }
